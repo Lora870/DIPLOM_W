@@ -5,7 +5,7 @@ from config import base_url, headers
 @allure.epic("API Тестирование")
 @allure.feature("Поиск книг")
 @allure.title("Поиск книги по автору")
-@allure.description("Проверка, что API возвращает книги с ожидаемым автором.")
+@allure.description("Проверка, что API возвращает книги с ожидаемым автором")
 def test_api_book_by_author():
     resp = requests.get(f"{base_url}search/product?phrase=Пушкин", headers=headers)
     assert resp.status_code == 200
@@ -14,7 +14,7 @@ def test_api_book_by_author():
 @allure.epic("API Тестирование")
 @allure.feature("Поиск книг")
 @allure.title("Поиск книги по названию")
-@allure.description("Проверка, что API возвращает книги с ожидаемым названием книги.")
+@allure.description("Проверка, что API возвращает книги с ожидаемым названием книги")
 def test_api_book_by_author():
     resp = requests.get(f"{base_url}search/product?phrase=Руслан и Людмила", headers=headers)
     assert resp.status_code == 200
@@ -22,7 +22,7 @@ def test_api_book_by_author():
 @allure.epic("API Тестирование")
 @allure.feature("Поиск книг")
 @allure.title("Поиск книги на английском языке ")
-@allure.description("Проверка, что API возвращает книги на английском языке.")
+@allure.description("Проверка, что API возвращает книги на английском языке")
 def test_api_book_by_author():
     resp = requests.get(f"{base_url}search/product?phrase=English", headers=headers)
     assert resp.status_code == 200
@@ -30,7 +30,7 @@ def test_api_book_by_author():
 @allure.epic("API Тестирование")
 @allure.feature("Поиск книг")
 @allure.title("Поиск книги пустой ввод ")
-@allure.description("Проверка, что API возвращает пустой ответ.")
+@allure.description("Проверка, что API возвращает пустой ответ")
 def test_api_book_by_author():
     resp = requests.get(f"{base_url}search/product?phrase=пустой ответ", headers=headers)
     assert resp.status_code == 200
@@ -38,7 +38,7 @@ def test_api_book_by_author():
 @allure.epic("API Тестирование")
 @allure.feature("Поиск книг")
 @allure.title("Поиск книги наличие цены у книг ")
-@allure.description("Проверка, что API возвращает все книги с ценой ")
+@allure.description("Проверка, что API возвращает все книги с ценой")
 def test_api_book_by_author():
     resp = requests.get(f"{base_url}search/product?phrase=цена должна быть числом", headers=headers)
     assert resp.status_code == 200

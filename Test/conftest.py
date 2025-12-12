@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-#Фикстура для инициализации и закрытия драйвера.
+# Фикстура для инициализации и закрытия драйвера.
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()

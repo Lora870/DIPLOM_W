@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class MainPage:
 
-    @allure.step("Открыть главную страницу Читай‑город")
+    @allure.step("Открыть главную страницу Читай‑город.")
     def __init__(self, driver: WebDriver):
         self.driver = driver
         self.driver.get("https://www.chitai-gorod.ru")
