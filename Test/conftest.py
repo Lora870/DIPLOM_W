@@ -6,6 +6,6 @@ from selenium import webdriver
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.implicitly_wait(50)
+    driver.implicitly_wait(30)
     yield driver
     driver.quit()

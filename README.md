@@ -16,6 +16,11 @@
 - request
 - allure
 
+### Запуск тестов:
+-   pytest          # все тесты
+-   pytest -m ui    # только UI-тесты
+    pytest -m api   # только API-тесты
+
 ### Структура
 - test_api - тесты АПИ
 - test_ui - тесты UI

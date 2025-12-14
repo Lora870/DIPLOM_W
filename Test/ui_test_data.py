@@ -1,0 +1,11 @@
+SEARCH_TITLE_CHERRY = "Вишневый"
+SEARCH_AUTHOR_TEXT = "Пушкин"
+SEARCH_ENGLISH_TEXT: str = "Potter"
+SEARCH_SYMBOLS: str = "#$%%$#$$"
+SEARCH_THAI_TEXT = "เกาะมหาสมบัต"
+
+EXPECTED_TITLE_CHERRY = "Результаты поиска «вишневый»"
+EXPECTED_AUTHOR_TEXT = "Результаты поиска «пушкин»"
+EXPECTED_ENGLISH_TEXT = "Результаты поиска «potter»"
+EXPECTED_SYMBOLS = "Результаты поиска «#$%%$#$$»"
+EXPECTED_THAI_TEXT = "Результаты поиска «เกาะมหาสมบัต»"

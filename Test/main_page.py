@@ -10,7 +10,7 @@ class MainPage:
     @allure.step("Открыть главную страницу Читай‑город.")
     def __init__(self, driver: WebDriver):
         self.driver = driver
-        self.driver.get("https://www.chitai-gorod.ru")
+        self.driver.get("https://www.chitai-gorod.ru/")
 
     @allure.step('Поиск книги по запросу: "{query}"')
     def search_book(self, query: str):
@@ -21,10 +21,9 @@ class MainPage:
             By.CLASS_NAME,
             "search-form__icon-search"
         ).click()
-        WebDriverWait(self.driver, 40).until(
-            EC.text_to_be_present_in_element(
-                (By.CLASS_NAME, "search-title__head"),
-                query
+        WebDriverWait(self.driver, 30).until(
+            EC.visibility_of_element_located(
+                (By.CLASS_NAME, "search-title__head")
             )
         )
 
