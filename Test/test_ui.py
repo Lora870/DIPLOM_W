@@ -1,5 +1,4 @@
 import allure
-import conftest
 from main_page import MainPage
 from ui_test_data import (
     SEARCH_TITLE_CHERRY,
@@ -36,7 +35,7 @@ class TestBookSearch:
 
     @allure.title("Поиск книги на английском")
     @allure.description("Тест проверяет поиск книги с использованием английского названия")
-    def test_by_name_language_english(self, driver):
+    def test_by_name_english(self, driver: object) -> None:
         main_page = MainPage(driver)
 
         main_page.search_book(SEARCH_ENGLISH_TEXT)
@@ -52,7 +51,7 @@ class TestBookSearch:
 
     @allure.title("Поиск книги на тайском языке")
     @allure.description("Тест проверяет поиск книги с использование тайских символов в названии")
-    def test_negative_by_language_thai(self, driver):
+    def test_negative_by_thai(self, driver):
         main_page = MainPage(driver)
 
         main_page.search_book(SEARCH_THAI_TEXT)
